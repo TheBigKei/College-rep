@@ -1,0 +1,66 @@
+*{
+    margin: 0;  /*Убираем изначальные отступы у сайта*/
+}
+
+body, html{
+    background-color: #e9e9f2;  /*Задний фон всего сайта*/
+    font-family: 'Geometria', 'Arial', sans-serif;
+    color: #47474b;
+    height: 100%;
+    min-width: 20%;
+}
+
+.main_block{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+#h1_content{
+    text-align: center; /*Центрируем текст*/
+    margin-top: 50px;
+}
+
+.block_container{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-left: 10%;
+    border: 2px solid;
+    border-color: #47474b;
+}
+
+h2{
+    font-size: 32px;
+    padding-left: 200px;
+    margin-bottom: 50px;
+}
+
+#p_main{
+    margin-top: 20px;
+    text-align: left;
+    font-size: 24px;
+}
+
+table{
+    display: flex;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 24px;
+}
+   
+th,td{
+    padding: 8px;
+}
+
+#th_list{
+    font-size: 20px;
+    text-align: left;
+    width: 100%;
+}
+
+#th_table{
+    font-size: 20px;
+    text-align: left;
+    width: 700px;
+}
