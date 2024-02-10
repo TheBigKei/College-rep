@@ -1,0 +1,11 @@
+*{
+    margin: 0;  /*Убираем изначальные отступы у сайта*/
+}
+
+body, html{
+    background-color: #e9e9f2;  /*Задний фон всего сайта*/
+    font-family: 'Geometria', 'Arial', sans-serif;
+    color: #47474b;
+    height: 100%;
+    min-width: 20%;
+}
