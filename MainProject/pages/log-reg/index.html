@@ -61,8 +61,21 @@
             </div>
         </div>
         <!--Контейнер для основного контента-->
-        <div class="content"> 
+        <div class="content">
+            <div class="image_container">
+               <img src="../../images/gerb.png" alt="gerb.png"> 
+            </div>
             
+            <p id="p_log">Вход в учётную запись</p>
+            <div class="login">
+                <form id="loginForm">
+                    <label for="login_field">Логин</label>
+                    <input type="text" id="login" name="login" autocapitalize="off" autocorrect="off" autocomplete="username" autofocus="autofocus">
+                    <label for="password_field" id="password">Пароль</label>
+                    <input type="password" id="password" name="password" autocomplete="current-password" autocapitalize="off" autocorrect="off">
+                    <input type="submit" value="Войти" name="commit" id="btnSubmit" class="login-input">
+                </form>
+            </div>
         </div>     
     </div>
     <!--Контейнер функция для опускания footer в самый низ сайта-->
@@ -85,5 +98,6 @@
             </div>   
         </div>       
     </footer>
+    <script src="scripts/login.js"></script>
 </body>
 </html>
