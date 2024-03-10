@@ -17,7 +17,6 @@ body, html{
 
 .profile{
     display: grid;
-    grid-row: 1fr;
     grid-template-columns: repeat(2, 1fr);
     margin: 250px;
     margin-top: 150px;
@@ -26,6 +25,37 @@ body, html{
     height: 500px;
 }
 
-.img_container{
-    display: block;
+.infoBox{
+    display: inherit;
+    grid-row: 2fr;
+    margin: 30px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.image_container{
+    display: inherit;
+    align-items: center;
+}
+
+.shortInfo{
+    display: inherit;
+    grid-row: 3fr;
+    align-items: center;
+}
+
+.shortInfo{
+    text-align: center;
+}
+
+.fullInfo{
+    display: inherit;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row: 7fr;
+}
+
+.info{
+    display: inherit;
+    margin-left: 30px;
+    align-items: center;
 }
