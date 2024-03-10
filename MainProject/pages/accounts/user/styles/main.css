@@ -1,0 +1,31 @@
+*{
+    margin: 0;  /*Убираем изначальные отступы у сайта*/
+}
+
+body, html{
+    background-color: #e9e9f2;  /*Задний фон всего сайта*/
+    font-family: 'Geometria', 'Arial', sans-serif;
+    color: #47474b;
+    height: 100%;
+    min-width: 20%;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
+.profile{
+    display: grid;
+    grid-row: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 250px;
+    margin-top: 150px;
+    background-color: #cdcddb;
+    width: 70%;
+    height: 500px;
+}
+
+.img_container{
+    display: block;
+}
