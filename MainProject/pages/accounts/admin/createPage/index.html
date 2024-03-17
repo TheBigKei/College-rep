@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Стиль для основной страницы-->
-    <link rel="stylesheet" type="text/css" href="styles/style.css"> 
+    <link rel="stylesheet" type="text/css" href="styles/main.css"> 
     <!--Стиль для верхней навигационной панели-->
-    <link rel="stylesheet" type="text/css" href="../../styles/nav_pannel.css"> 
+    <link rel="stylesheet" type="text/css" href="../../../../styles/nav_pannel.css"> 
     <!--Стиль для подвала (footer) сайта-->
-    <link rel="stylesheet" type="text/css" href="styles/footer.css"> 
+    <link rel="stylesheet" type="text/css" href="../../../../styles/footer.css"> 
     <title>Home</title>
 </head>
 <body>
@@ -18,13 +18,13 @@
         <div class="nav_pannel"> 
             <!--Контейнер для картинки-->
             <div class="img_nav_conteiner">
-                <a href="../../index.html" id="a_img"><img src="../../images/home.png" alt="home.png" id="nav_home"></a> 
+                <a href="../../../../index.html" id="a_img"><img src="../../../../images/home.png" alt="home.png" id="nav_home"></a> 
             </div>
             <!--Контейнер для dropdown элементов-->
             <div class="menu_container">
                 <!--Основные контейнеры для ссылок-->
                 <div class="dropdown">
-                    <a href="../../index.html" id="a_nav1">Главная</a>
+                    <a href="../../../../index.html" id="a_nav1">Главная</a>
                 </div>
                 <div class="dropdown">
                     <a href="" id="a_nav1">Магазины</a>
@@ -50,37 +50,50 @@
                     </div>
                 </div>
                 <div class="dropdown">
-                    <a href="../info/index.html" id="a_nav1">Информация</a>
+                    <a href="../../../info/index.html" id="a_nav1">Информация</a>
                 </div>
                 <div class="dropdown">
-                    <a href="index.html" id="a_nav1">Контакты</a>
+                    <a href="../../../contacts/index.html" id="a_nav1">Контакты</a>
                 </div>
                 <div class="dropdown">
-                    <a href="../log/index.html" id="a_nav1">Вход</a>
+                    <a href="../../../log/index.html" id="a_nav1">Вход</a>
                 </div>
             </div>
         </div>
         <!--Контейнер для основного контента-->
-        <div class="content"> 
-            <h1 id="h1_content">Полная информация об организации</h1>
-            <div class="main_block">
-                <h2>Реквезиты компании</h2>
-                <div class="block_container">
-                <table>
-                    <tr>
-                        <th id="th_list">Юридический адрес: 140170, МОСКОВСКАЯ ОБЛАСТЬ, Г. БРОННИЦЫ, УЛ. СОВЕТСКАЯ, Д.69</th>
-                    </tr>
-                    <tr>
-                        <th id="th_list">Телефон: +7 (49646) 6-54-41</th>
-                    </tr>
-                    <tr>
-                        <th id="th_list">E-mail: BRONPO@DTS.RU, bux.bronpo@bk.ru</th>
-                    </tr>
-                    <tr>
-                        <th id="th_list">Факс: 559-96-33</th>
-                    </tr>
-                </table>
+        <div class="content">
+            <p id="p_createUser">Создание нового пользователя</p>
+            <div class="createUser">
+                <div class="img_container">
+                    <img src="../../../../images/backArrow.png" alt="backArrow.png">
                 </div>
+                <form id="createUserForm">
+                    <label for="firstName_field">Имя</label>
+                    <input type="text" id="firstName" name="firstName" autocapitalize="on" autocorrect="on" autocomplete="off" autofocus="autofocus">
+
+                    <label for="midName_field">Фамилия</label>
+                    <input type="text" id="midName" name="midName" autocapitalize="on" autocorrect="on" autocomplete="off">
+
+                    <label for="lastName_field">Отчество</label>
+                    <input type="text" id="lastName" name="lastName" autocapitalize="on" autocorrect="on" autocomplete="off">
+
+                    <label for="salary_field">Зарплата</label>
+                    <input type="text" id="salary" name="salary" autocomplete="off">
+
+                    <label for="phone_field">Телефон</label>
+                    <input type="text" id="phone" name="phone" autocapitalize="off" autocorrect="off" autocomplete="off">
+
+                    <label for="email_field">Почта</label>
+                    <input type="text" id="email" name="email" autocapitalize="off" autocorrect="off" autocomplete="off">
+
+                    <label for="login_field">Логин</label>
+                    <input type="text" id="login" name="login" autocapitalize="off" autocorrect="off" autocomplete="off">
+
+                    <label for="password_field" id="password">Пароль</label>
+                    <input type="password" id="password" name="password" autocomplete="current-password" autocapitalize="off" autocorrect="off">
+
+                    <input type="submit" value="Создать" name="commit" id="btnSubmit" class="create-input">
+                </form>
             </div>
         </div>     
     </div>
@@ -88,7 +101,7 @@
     <div class="push"></div> 
     <!--Подвал (footer) сайта-->
     <footer> 
-        <img src="../../images/gerb.png" alt="Bronnitskiy gerb" id="gerb">
+        <img src="../../../../images/gerb.png" alt="Bronnitskiy gerb" id="gerb">
         <!--Главный контейнер в footer-->
         <div class="main_foot_container">
             <!--Блок контейнер-->
