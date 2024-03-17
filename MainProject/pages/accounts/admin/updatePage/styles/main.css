@@ -18,44 +18,39 @@ body, html{
 .profile{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 450px 200px auto;
     margin: 250px;
     margin-top: 150px;
     background-color: #cdcddb;
     width: 70%;
-    height: 500px;
+    height: 600px;
 }
 
-.infoBox{
+.fullname{
+    display: flex;
+    margin-inline: 20px;
+}
+
+button{
+    height: 50px;
+    font-size: 24px;
+    width: 150px;
+    cursor: pointer;
+}
+
+.users{
     display: inherit;
-    grid-row: 2fr;
-    margin: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    max-height: 600px; 
+    overflow-y: auto;
+}
+
+.user{
+    display: inherit;
+    height: 80px;
+    align-items: center;
     justify-content: center;
-    margin-bottom: 50px;
-}
-
-.image_container{
-    display: inherit;
-    align-items: center;
-}
-
-.shortInfo{
-    display: inherit;
-    grid-row: 3fr;
-    align-items: center;
-}
-
-.shortInfo{
-    text-align: center;
-}
-
-.fullInfo{
-    display: inherit;
-    grid-template-columns: repeat(2, 1fr);
-    grid-row: 7fr;
-}
-
-.info{
-    display: inherit;
-    margin-left: 30px;
-    align-items: center;
+    border: solid black;
+    cursor: pointer;
+    margin: 30px;
 }
