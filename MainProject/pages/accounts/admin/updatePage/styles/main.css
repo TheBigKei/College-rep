@@ -18,7 +18,6 @@ body, html{
 .profile{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-columns: 450px 200px auto;
     margin: 250px;
     margin-top: 150px;
     background-color: #cdcddb;
@@ -26,7 +25,42 @@ body, html{
     height: 600px;
 }
 
-.fullname{
+form{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-columns: 40% 60%;
+    margin-top: 30px;
+    align-items: center;
+    margin-left: 70px;
+}
+
+label{
+    margin-left: 100px;
+}
+
+#btnSubmit{ 
+    background-color: #ffffff;
+    grid-column: span 2;
+    cursor: pointer;
+    justify-self: center;
+    margin-right: 70px;
+}
+
+input{
+    margin-top: 5px;
+    width: 225px;
+    height: auto;
+    font-size: 24px;
+    border-radius: 6px;
+    border: none;
+}
+
+
+#btnSubmit:active{
+    background-color: lightgray;
+}
+
+.label-input{
     display: flex;
     margin-inline: 20px;
 }
@@ -53,4 +87,13 @@ button{
     border: solid black;
     cursor: pointer;
     margin: 30px;
+}
+
+.img_container{
+    position: absolute; 
+    top: 23%; 
+    left: 56%; 
+    transform: translate(-1550%, 100%);
+    z-index: 1;
+    cursor: pointer;
 }

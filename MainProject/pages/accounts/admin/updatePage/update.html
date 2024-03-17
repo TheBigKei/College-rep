@@ -6,9 +6,9 @@
     <!--Стиль для основной страницы-->
     <link rel="stylesheet" type="text/css" href="styles/main.css"> 
     <!--Стиль для верхней навигационной панели-->
-    <link rel="stylesheet" type="text/css" href="../../../styles/nav_pannel.css"> 
+    <link rel="stylesheet" type="text/css" href="../../../../styles/nav_pannel.css"> 
     <!--Стиль для подвала (footer) сайта-->
-    <link rel="stylesheet" type="text/css" href="../../../styles/footer.css"> 
+    <link rel="stylesheet" type="text/css" href="../../../../styles/footer.css"> 
     <title>Home</title>
 </head>
 <body>
@@ -18,13 +18,13 @@
         <div class="nav_pannel"> 
             <!--Контейнер для картинки-->
             <div class="img_nav_conteiner">
-                <a href="../../../index.html" id="a_img"><img src="../../../images/home.png" alt="home.png" id="nav_home"></a> 
+                <a href="../../../../index.html" id="a_img"><img src="../../../../images/home.png" alt="home.png" id="nav_home"></a> 
             </div>
             <!--Контейнер для dropdown элементов-->
             <div class="menu_container">
                 <!--Основные контейнеры для ссылок-->
                 <div class="dropdown">
-                    <a href="../../../index.html" id="a_nav1">Главная</a>
+                    <a href="../../../../index.html" id="a_nav1">Главная</a>
                 </div>
                 <div class="dropdown">
                     <a href="" id="a_nav1">Магазины</a>
@@ -50,30 +50,31 @@
                     </div>
                 </div>
                 <div class="dropdown">
-                    <a href="../../info/index.html" id="a_nav1">Информация</a>
+                    <a href="../../../info/index.html" id="a_nav1">Информация</a>
                 </div>
                 <div class="dropdown">
-                    <a href="../../contacts/index.html" id="a_nav1">Контакты</a>
+                    <a href="../../../contacts/index.html" id="a_nav1">Контакты</a>
                 </div>
                 <div class="dropdown">
-                    <a href="../../log/index.html" id="a_nav1">Вход</a>
+                    <a href="../../../log/index.html" id="a_nav1">Вход</a>
                 </div>
             </div>
         </div>
         <!--Контейнер для основного контента-->
         <div class="content">
             <div class="profile">
-                <form id="createUserForm">
-                    <div class="fullName">
-                        <label for="firstName_field">Имя</label>
-                        <input type="text" id="firstName" name="firstName" autocapitalize="on" autocorrect="on" autocomplete="off" autofocus="autofocus">
+                <div class="img_container" onclick="goBack()">
+                    <img class="backArrow" src="../../../../images/backArrow.png" alt="backArrow">
+                </div>
+                <form id="updateUserForm">
+                    <label for="firstName_field">Имя</label>
+                    <input type="text" id="firstName" name="firstName" autocapitalize="on" autocorrect="on" autocomplete="off" autofocus="autofocus">
 
-                        <label for="midName_field">Фамилия</label>
-                        <input type="text" id="midName" name="midName" autocapitalize="on" autocorrect="on" autocomplete="off">
+                    <label for="midName_field">Фамилия</label>
+                    <input type="text" id="midName" name="midName" autocapitalize="on" autocorrect="on" autocomplete="off">
 
-                        <label for="lastName_field">Отчество</label>
-                        <input type="text" id="lastName" name="lastName" autocapitalize="on" autocorrect="on" autocomplete="off">
-                    </div>
+                    <label for="lastName_field">Отчество</label>
+                    <input type="text" id="lastName" name="lastName" autocapitalize="on" autocorrect="on" autocomplete="off">
     
                     <label for="salary_field">Зарплата</label>
                     <input type="text" id="salary" name="salary" autocomplete="off">
@@ -122,7 +123,7 @@
     <div class="push"></div> 
     <!--Подвал (footer) сайта-->
     <footer> 
-        <img src="../../../images/gerb.png" alt="Bronnitskiy gerb" id="gerb">
+        <img src="../../../../images/gerb.png" alt="Bronnitskiy gerb" id="gerb">
         <!--Главный контейнер в footer-->
         <div class="main_foot_container">
             <!--Блок контейнер-->
@@ -142,6 +143,6 @@
             </div>   
         </div>       
     </footer>
-    <script src="scripts/admin.js"></script>
+    <script src="scripts/update.js"></script>
 </body>
 </html>
