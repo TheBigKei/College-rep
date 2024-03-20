@@ -13,9 +13,16 @@ namespace BezdarAPI.DataContext.Model
         public string Login { get; set; }
         public string Password { get; set; }
         public int PermissionId { get; set; }
+        public string Email { get; set; }
+        public string Phone { get; set; }
+        public string Salary { get; set; }
+        public int ShopId {  get; set; }
 
 
         [ForeignKey("PermissionId")]
         public UserPermission UserPermission { get; set; }
+
+        [ForeignKey("ShopId")]
+        public Shop Shop { get; set; }
     }
 }

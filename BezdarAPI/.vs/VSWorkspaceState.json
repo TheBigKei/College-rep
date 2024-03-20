@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\BezdarAPI",
-    "\\BezdarAPI\\DataContext"
+    "\\BezdarAPI\\DataContext",
+    "\\BezdarAPI\\DataContext\\DTO",
+    "\\BezdarAPI\\Migrations"
   ],
-  "SelectedNode": "\\BezdarAPI.sln",
+  "SelectedNode": "\\BezdarAPI\\DataContext\\DTO\\UserDTO.cs",
   "PreviewInSolutionExplorer": false
 }

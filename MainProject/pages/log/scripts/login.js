@@ -12,12 +12,21 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
             "Access-Control-Allow-Origin": "true"
         },
         success: function (data) {
+            // Перенаправляем пользователя на другую страницу
             window.location.href = '/MainProject/pages/accounts/user/index.html';
+            
+            // Устанавливаем куки
+            document.cookie = "Name=" + data.name + "; path=/";
+            document.cookie = "Surname=" + data.surname + "; path=/";
+            document.cookie = "Patronymic=" + data.patronymic + "; path=/";
+            document.cookie = "ShopId=" + data.shopId + "; path=/";
+            document.cookie = "Email=" + data.email + "; path=/";
+            document.cookie = "Phone=" + data.phone + "; path=/";
+            
             console.log(data);
         },
         error: function (data) {
             alert(data);
-    
             result = false;
         }
     });
