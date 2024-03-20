@@ -1,0 +1,6 @@
+@BezdarAPI_HostAddress = http://localhost:5287
+
+GET {{BezdarAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

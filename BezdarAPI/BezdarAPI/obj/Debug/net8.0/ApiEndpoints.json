@@ -1,0 +1,151 @@
+[
+  {
+    "ContainingType": "BezdarAPI.Controllers.RequestController",
+    "Method": "AddRequest",
+    "RelativePath": "api/Request/add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newRequest",
+        "Type": "BezdarAPI.DataContext.DTO.RequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BezdarAPI.Controllers.RequestController",
+    "Method": "GetRequestById",
+    "RelativePath": "api/Request/id={id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BezdarAPI.Controllers.RequestController",
+    "Method": "DeleteRequest",
+    "RelativePath": "api/Request/id={id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BezdarAPI.Controllers.ShopController",
+    "Method": "AddShop",
+    "RelativePath": "api/Shop/add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newShop",
+        "Type": "BezdarAPI.DataContext.DTO.ShopDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BezdarAPI.Controllers.ShopController",
+    "Method": "GetShopById",
+    "RelativePath": "api/Shop/id={id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BezdarAPI.Controllers.ShopController",
+    "Method": "DeleteShop",
+    "RelativePath": "api/Shop/id={id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BezdarAPI.Controllers.UserController",
+    "Method": "DeleteUser",
+    "RelativePath": "api/User/id={id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BezdarAPI.Controllers.UserController",
+    "Method": "GetUser",
+    "RelativePath": "api/User/login={log}\u0026pass={pass}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "log",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "pass",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BezdarAPI.Controllers.UserController",
+    "Method": "AddUser",
+    "RelativePath": "api/User/reg",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newUser",
+        "Type": "BezdarAPI.DataContext.DTO.UserDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
