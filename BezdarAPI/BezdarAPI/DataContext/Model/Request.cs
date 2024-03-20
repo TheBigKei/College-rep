@@ -13,7 +13,8 @@ namespace BezdarAPI.DataContext.Model
 
         [ForeignKey("UserId")]
         public User User { get; set; }
-        [ForeignKey("ShopId")]
+
+        [ForeignKey("ShopTitle")]
         public Shop Shop { get; set; }
     }
 }

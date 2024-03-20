@@ -5,7 +5,7 @@
 namespace BezdarAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class BezdarnayaBaza : Migration
+    public partial class NAME : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -48,7 +48,11 @@ namespace BezdarAPI.Migrations
                     Patronymic = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Login = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PermissionId = table.Column<int>(type: "int", nullable: false)
+                    PermissionId = table.Column<int>(type: "int", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Salary = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ShopTitle = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -68,14 +72,15 @@ namespace BezdarAPI.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserId = table.Column<int>(type: "int", nullable: false),
-                    ShopId = table.Column<int>(type: "int", nullable: false)
+                    ShopId = table.Column<int>(type: "int", nullable: false),
+                    ShopTitle = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Requests", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Requests_Shops_ShopId",
-                        column: x => x.ShopId,
+                        name: "FK_Requests_Shops_ShopTitle",
+                        column: x => x.ShopTitle,
                         principalTable: "Shops",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -88,9 +93,9 @@ namespace BezdarAPI.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Requests_ShopId",
+                name: "IX_Requests_ShopTitle",
                 table: "Requests",
-                column: "ShopId");
+                column: "ShopTitle");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Requests_UserId",

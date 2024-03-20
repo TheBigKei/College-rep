@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BezdarAPI.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20240304161121_BezdarnayaBaza")]
-    partial class BezdarnayaBaza
+    [Migration("20240320164620_NAME")]
+    partial class NAME
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -35,12 +35,15 @@ namespace BezdarAPI.Migrations
                     b.Property<int>("ShopId")
                         .HasColumnType("int");
 
+                    b.Property<int>("ShopTitle")
+                        .HasColumnType("int");
+
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ShopId");
+                    b.HasIndex("ShopTitle");
 
                     b.HasIndex("UserId");
 
@@ -76,6 +79,10 @@ namespace BezdarAPI.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Login")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -94,6 +101,18 @@ namespace BezdarAPI.Migrations
 
                     b.Property<int>("PermissionId")
                         .HasColumnType("int");
+
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Salary")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ShopTitle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Surname")
                         .IsRequired()
@@ -127,7 +146,7 @@ namespace BezdarAPI.Migrations
                 {
                     b.HasOne("BezdarAPI.DataContext.Model.Shop", "Shop")
                         .WithMany()
-                        .HasForeignKey("ShopId")
+                        .HasForeignKey("ShopTitle")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

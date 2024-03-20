@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BezdarAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d813310e6249440c20391216c2fcb98eee778b60")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f1536380d9fe97e98b1bdccd4626c49e9d51e93")]
 [assembly: System.Reflection.AssemblyProductAttribute("BezdarAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BezdarAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

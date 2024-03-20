@@ -41,6 +41,10 @@ namespace BezdarAPI.Controllers
                 Patronymic = newUser.Patronymic,
                 Login = newUser.Login,
                 Password = newUser.Password,
+                Email = newUser.Email,
+                Salary = newUser.Salary,
+                Phone = newUser.Phone,
+                ShopTitle = newUser.ShopTitle,
                 PermissionId = 1
             };
 

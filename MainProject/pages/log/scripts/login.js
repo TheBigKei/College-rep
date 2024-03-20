@@ -13,17 +13,17 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
         },
         success: function (data) {
             // Перенаправляем пользователя на другую страницу
-            window.location.href = '/MainProject/pages/accounts/user/index.html';
-            
+            console.log(data);
             // Устанавливаем куки
             document.cookie = "Name=" + data.name + "; path=/";
             document.cookie = "Surname=" + data.surname + "; path=/";
             document.cookie = "Patronymic=" + data.patronymic + "; path=/";
-            document.cookie = "ShopId=" + data.shopId + "; path=/";
+            document.cookie = "ShopTitle=" + data.shopTitle + "; path=/";
             document.cookie = "Email=" + data.email + "; path=/";
             document.cookie = "Phone=" + data.phone + "; path=/";
-            
-            console.log(data);
+            document.cookie = "Salary=" + data.salary + "; path=/";
+
+            window.location.href = '/MainProject/pages/accounts/user/index.html';
         },
         error: function (data) {
             alert(data);
