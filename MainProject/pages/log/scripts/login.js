@@ -23,7 +23,14 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
             document.cookie = "Phone=" + data.phone + "; path=/";
             document.cookie = "Salary=" + data.salary + "; path=/";
 
-            window.location.href = '/MainProject/pages/accounts/user/index.html';
+            switch (data.permissionId){
+                case 1:
+                    window.location.href = '/MainProject/pages/accounts/user/index.html';
+                    break;
+                case 2:
+                    window.location.href = '/MainProject/pages/accounts/admin/index.html';
+                    break;
+            }
         },
         error: function (data) {
             alert(data);

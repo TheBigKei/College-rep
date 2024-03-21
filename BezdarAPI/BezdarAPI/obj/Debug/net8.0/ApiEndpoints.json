@@ -147,5 +147,21 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BezdarAPI.Controllers.UserController",
+    "Method": "GetUsersByShopTitle",
+    "RelativePath": "api/User/shopTitle={shopTitle}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "shopTitle",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

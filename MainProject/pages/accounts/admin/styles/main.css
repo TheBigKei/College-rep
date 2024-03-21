@@ -68,10 +68,15 @@ button{
 
 .user{
     display: inherit;
+    grid-template-columns: repeat(2,3fr);
     height: 80px;
     align-items: center;
     justify-content: center;
+    text-align: center;
     border: solid black;
-    cursor: pointer;
     margin: 30px;
+    cursor: pointer;
 }
+
+
+
