@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BezdarAPI.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20240320164620_NAME")]
-    partial class NAME
+    [Migration("20240321131210_name")]
+    partial class name
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

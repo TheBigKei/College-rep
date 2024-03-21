@@ -42,22 +42,20 @@ $.ajax({
 
             // Создаем div элемент для пользователя и добавляем в него label элементы
             var userElement = $("<div class='user'></div>").append(firstNameElement,salaryElement, midNameElement, phoneElement, lastNameElement,   emailElement);
+
+            userElement.attr("data-id", user.id);
             // Добавляем созданный div элемент в контейнер .users
             $(".users").append(userElement);
+            
+            userElement.on("click", function() {
+                // Удаляем класс 'selected' у всех элементов .user
+                $(".user").removeClass("selected");
+                // Добавляем класс 'selected' только текущему элементу .user
+                $(this).addClass("selected");
+            });
         });
     },
     error: function () {
         alert("Error fetching users from API.");
     }
-});
-
-$(function() {
-    // Добавляем обработчик события click для контейнера .user
-    $(".user").on("click", function() {
-        // Изменяем стиль заднего фона контейнера
-        $(this).css("background-color", "#bbbbc7");
-
-        // Добавляем анимацию к изменению заднего фона
-        $(this).animate({ backgroundColor: "transparent" }, 1);
-    });
 });

@@ -5,7 +5,7 @@
 namespace BezdarAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class NAME : Migration
+    public partial class name : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

@@ -74,9 +74,15 @@ button{
     justify-content: center;
     text-align: center;
     border: solid black;
+    cursor: pointer;
     margin: 30px;
+}
+
+.selected{
+    background-color: #bbbbc7;
     cursor: pointer;
 }
 
-
-
+.info{
+    cursor: pointer;
+}

@@ -25,7 +25,7 @@ namespace BezdarAPI.Controllers
         }
 
         [HttpPost("reg")]
-        public async Task<IActionResult> AddUser([FromBody] UserDTO newUser) 
+        public async Task<IActionResult> AddUser([FromBody] UserDTO newUser)
         {
             var userIsExist = await _context.Users
                 .Where(u => u.Login == newUser.Login && u.Password == newUser.Password)
@@ -33,6 +33,12 @@ namespace BezdarAPI.Controllers
 
             if (userIsExist)
                 return BadRequest("User already exist");
+
+            // Получаем пользователя, чтобы получить название магазина
+            var currentUser = await _context.Users.FirstOrDefaultAsync(u => u.ShopTitle == newUser.ShopTitle);
+
+            if (currentUser == null)
+                return BadRequest("User with specified ShopTitle not found");
 
             User user = new()
             {
@@ -44,7 +50,7 @@ namespace BezdarAPI.Controllers
                 Email = newUser.Email,
                 Salary = newUser.Salary,
                 Phone = newUser.Phone,
-                ShopTitle = newUser.ShopTitle,
+                ShopTitle = currentUser.ShopTitle, // Используем название магазина из currentUser
                 PermissionId = 1
             };
 
