@@ -71,6 +71,17 @@ namespace BezdarAPI.Controllers
             return Ok(users);
         }
 
+        [HttpGet("id={id}")]
+        public async Task<IActionResult> GetUsersByShopTitle([FromRoute] int id)
+        {
+            var users = await _context.Users.Where(u => u.Id == id).ToListAsync();
+
+            if (users == null || users.Count == 0)
+                return BadRequest("Users not found for the specified id");
+
+            return Ok(users);
+        }
+
         [HttpDelete("id={id}")]
         public async Task<IActionResult> DeleteUser([FromRoute] int id) 
         {

@@ -97,6 +97,22 @@
   },
   {
     "ContainingType": "BezdarAPI.Controllers.UserController",
+    "Method": "GetUsersByShopTitle",
+    "RelativePath": "api/User/id={id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BezdarAPI.Controllers.UserController",
     "Method": "DeleteUser",
     "RelativePath": "api/User/id={id}",
     "HttpMethod": "DELETE",

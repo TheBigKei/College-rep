@@ -34,7 +34,7 @@ form{
     margin-left: 70px;
 }
 
-label{
+label:not(.info){
     margin-left: 100px;
 }
 
@@ -77,16 +77,28 @@ button{
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     max-height: 600px; 
     overflow-y: auto;
+    text-align: center;
 }
 
 .user{
     display: inherit;
+    grid-template-columns: repeat(2,3fr);
     height: 80px;
     align-items: center;
     justify-content: center;
+    text-align: center;
     border: solid black;
     cursor: pointer;
     margin: 30px;
+}
+
+.selected{
+    background-color: #bbbbc7;
+    cursor: pointer;
+}
+
+.info{
+    cursor: pointer;
 }
 
 .img_container{
