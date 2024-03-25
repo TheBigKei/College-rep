@@ -82,6 +82,29 @@ namespace BezdarAPI.Controllers
             return Ok(users);
         }
 
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateUser(int id, [FromBody] UserDTO updatedUser)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == id);
+
+            if (user == null)
+                return BadRequest("User not found");
+
+            user.Name = updatedUser.Name;
+            user.Surname = updatedUser.Surname;
+            user.Patronymic = updatedUser.Patronymic;
+            user.Login = updatedUser.Login;
+            user.Password = updatedUser.Password;
+            user.Email = updatedUser.Email;
+            user.Salary = updatedUser.Salary;
+            user.Phone = updatedUser.Phone;
+            // Остальные поля обновления добавьте по мере необходимости
+
+            await _context.SaveChangesAsync();
+
+            return Ok("User has been updated!");
+        }
+
         [HttpDelete("id={id}")]
         public async Task<IActionResult> DeleteUser([FromRoute] int id) 
         {

@@ -20,6 +20,7 @@ $.ajax({
     success: function (data) {
         data.forEach(function(user) {
             // Создаем элементы label для каждого поля пользователя
+            var userId = user.id;
             var firstNameElement = $("<label class='info' id='firstName'></label>").text(user.name);
             var midNameElement = $("<label class='info' id='midName'></label>").text(user.surname);
             var lastNameElement = $("<label class='info' id='lastName'></label>").text(user.patronymic);
@@ -46,3 +47,42 @@ $.ajax({
         alert("Error fetching users from API.");
     }
 });
+
+$(function() {
+    $('#btnSubmit').click(function(event) {
+        event.preventDefault(); // Предотвращаем отправку формы по умолчанию
+
+        var selectedUserId = $(".selected").data("id");
+
+        // Подготавливаем данные пользователя для отправки на сервер
+        var updatedUserData = {
+            name: $('#firstName').val(),
+            surname: $('#midName').val(),
+            patronymic: $('#lastName').val(),
+            Salary: $('#salary').val(),
+            phone: $('#phone').val(),
+            email: $('#email').val(),
+            login: $('#login').val(),
+            password: $('#password').val(),
+            shopTitle:store
+        };
+
+        // Отправляем AJAX-запрос на обновление пользователя
+        $.ajax({    
+            type: "PUT",
+            url: "http://localhost:5287/api/User/" + selectedUserId,
+            contentType: "application/json",
+            data: JSON.stringify(updatedUserData),
+            success: function(response) {
+                // В случае успешного обновления пользователя выводим сообщение об успешном обновлении
+                alert("Пользователь успешно обновлен!");
+                // После успешного обновления можно выполнить другие действия, например, обновление списка пользователей или закрытие формы
+            },
+            error: function(xhr, status, error) {
+                // В случае ошибки выводим сообщение об ошибке
+                alert("Произошла ошибка при обновлении пользователя: " + error);
+            }
+        });
+    });
+});
+
